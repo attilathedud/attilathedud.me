@@ -1,0 +1,31 @@
+{
+    "name": "dark_minimal",
+    "description": "Minimal dark theme for Ghost.",
+    "demo": "attilathedud.me",
+    "version": "1.0.0",
+    "engines": {
+        "ghost": ">=0.9.0 <1.0.0"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "attilathedud",
+        "email": "attilathedud@gmail.com",
+        "url": "http://attilathedud.me"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Personal Blogs"
+        ]
+    },
+    "keywords": [
+        "dark",
+        "minimal",
+        "theme"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/attilathedud/attilathedud.me"
+    }
+}

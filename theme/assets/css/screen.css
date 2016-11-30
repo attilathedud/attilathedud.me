@@ -477,7 +477,7 @@ button {
     width: 32px;
     height: 32px;
     float: left;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     margin-left: 2rem;
 }
 
@@ -903,6 +903,12 @@ body:not(.page-template) .post-title {
 }
 
 
+@media only screen and (max-width:1100px) {
+    .new-nav {
+        display: none;
+    }
+}
+
 /* ==========================================================================
    12. Media Queries - Smaller than 900px
    ========================================================================== */
@@ -917,10 +923,7 @@ body:not(.page-template) .post-title {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        height: auto;
-        min-height: 240px;
-        height: 60vh;
-        padding: 15% 0;
+        padding: 4% 0;
     }
 
     .home-template .main-header:after { display: none; }
@@ -987,17 +990,12 @@ body:not(.page-template) .post-title {
 
     .main-header {
         margin-bottom: 15px;
-        height: 40vh;
-    }
-
-    .no-cover.main-header {
-        height: 30vh;
     }
 
     .paged .main-header {
         max-height: 20vh;
         min-height: 160px;
-        padding: 10% 0;
+        padding: 4% 0;
     }
 
     .inner,
@@ -1115,14 +1113,6 @@ body:not(.page-template) .post-title {
     }
 
 }
-
-
-/* ==========================================================================
-   14. Animations
-   ========================================================================== */
-
-
-
 
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff

@@ -1,18 +1,14 @@
-/* globals jQuery, document */
 (function ($, undefined) {
     "use strict";
 
-    var $document = $(document);
-
-    $document.ready(function () {
-
+    $(document).ready(function () {
+        /* Keeping in there in case we need to every post videos */
         var $postContent = $(".post-content");
         $postContent.fitVids();
 
-        $(".menu-button, .nav-cover, .nav-close").on("click", function(e){
-            e.preventDefault();
-            $("body").toggleClass("nav-opened nav-closed");
+        //Set each list item to a random bottom border
+        $('.new-nav a').each( function() {
+            $( this ).css( 'border-bottom', '5px solid rgba(' + Math.floor( Math.random( ) * 255 ) + ',' + Math.floor( Math.random( ) * 255 ) + ',' + Math.floor( Math.random( ) * 255 ) + ',.8)' );
         });
-
     });
 })(jQuery);

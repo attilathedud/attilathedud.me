@@ -35,7 +35,7 @@ body { margin: 0; }
 article, aside, details,
 figcaption, figure,
 footer, header,
-main, menu, nav,
+main, 
 section, summary { display:block; }
 audio, canvas, progress, video {
     display: inline-block;
@@ -128,46 +128,6 @@ td, th{ padding: 0; }
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-/* Each icon is created by inserting the correct character into the
-   content of the :before pseudo element. Like a boss. */
-.icon-ghost:before {
-    content: "\f600";
-}
-.icon-feed:before {
-    content: "\f601";
-}
-.icon-twitter:before {
-    content: "\f602";
-    font-size: 1.1em;
-}
-.icon-google-plus:before {
-    content: "\f603";
-}
-.icon-facebook:before {
-    content: "\f604";
-}
-.icon-arrow-left:before {
-    content: "\f605";
-}
-.icon-stats:before {
-    content: "\f606";
-}
-.icon-location:before {
-    content: "\f607";
-    margin-left: -3px; /* Tracking fix */
-}
-.icon-link:before {
-    content: "\f608";
-}
-.icon-menu:before {
-    content: "\f609";
-}
-/*
-    IMPORTANT: When making any changes to the icon font, be sure to increment
-    the version number by 1 in the @font-face rule. `?v=1` becomes `?v=2`
-    This forces browsers to download the new font file.
-*/
 
 
 /* ==========================================================================
@@ -584,6 +544,29 @@ body.nav-opened .site-wrapper {
     overflow: hidden;
 }
 
+.new-nav ul {
+    list-style: none;
+    padding-top: 2.5rem !important;
+    font-size: larger;
+    float: right;
+    padding-left: 6rem;
+    margin: 0 !important;
+}
+
+.new-nav li {
+    display: inline;
+}
+
+.new-nav li a {
+    text-decoration: none;
+    color: rgba(0,0,0,.8);
+    padding: 20px;
+}
+
+.new-nav li a:hover {
+    box-shadow: 0px -1px 10px gainsboro;
+}
+
 .main-nav {
     position: relative;
     padding: 35px 40px;
@@ -786,75 +769,6 @@ body.nav-opened .nav {
 .no-cover.main-header:after,
 .paged .main-header:after {
     display: none
-}
-
-.menu-button {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline-block;
-    float: right;
-    height: 38px;
-    padding: 0 15px;
-    border-style: solid;
-    border-width: 1px;
-    opacity: 1;
-    text-align: center;
-    font-size: 12px;
-    text-transform: uppercase;
-    line-height: 35px;
-    white-space: nowrap;
-    border-radius: 3px;
-    transition: all 0.5s ease;
-}
-.menu-button:before {
-    font-size: 12px;
-    font-weight: bold;
-    margin-right: 6px;
-    position: relative;
-    top: 1px;
-}
-.menu-button:hover {
-    background: #fff;
-}
-.menu-button:focus {
-    outline: 0;
-}
-
-/* When the navigation is closed */
-.nav-closed .menu-button {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.6);
-}
-.nav-closed .menu-button:hover {
-    color: #222;
-}
-
-/* When the navigation is closed and there is no cover image */
-.nav-closed .no-cover .menu-button {
-    border-color: #BFC8CD;
-    color: #9EABB3;
-}
-.nav-closed .no-cover .menu-button:hover {
-    border-color: #555;
-    color: #555;
-}
-
-/* When the navigation is opened */
-.nav-opened .menu-button {
-    padding: 0 12px;
-    background: #111;
-    border-color: #111;
-    color: #fff;
-    -webkit-transform: translate3D(94px, 0, 0);
-        -ms-transform: translate3D(94px, 0, 0);
-            transform: translate3D(94px, 0, 0);
-    transition: all 0.3s ease;
-}
-
-.nav-opened .menu-button .word {
-    opacity: 0;
-    transition: all 0.3s ease;
 }
 
 /* Special styles when overlaid on an image*/
@@ -1194,11 +1108,6 @@ body:not(.page-template) .post-title {
     min-height: 0;
     margin-bottom: 0;
     background: transparent;
-}
-
-.tag-head.main-header {
-    height: 40vh;
-    min-height: 180px;
 }
 
 .author-head.main-header {
@@ -1613,7 +1522,6 @@ body:not(.page-template) .post-title {
         height:45vh;
     }
 
-    .tag-head.main-header,
     .author-head.main-header {
         height: 30vh;
     }
@@ -1694,22 +1602,7 @@ body:not(.page-template) .post-title {
         height: 30px;
     }
 
-    .menu-button {
-        padding: 0 5px;
-        border-radius: 0;
-        border-width: 0;
-        color: #2e2e2e;
-        background: transparent;
-    }
-    .menu-button:hover {
-        color: #2e2e2e;
-        border-color: transparent;
-        background: none;
-    }
-    body.nav-opened .menu-button {
-        background: none;
-        border: transparent;
-    }
+    
 
     .main-nav.overlay a:hover {
         color: #fff;
@@ -1719,13 +1612,6 @@ body:not(.page-template) .post-title {
 
     .no-cover .main-nav.overlay {
         background: none;
-    }
-    .no-cover .main-nav.overlay .menu-button {
-        border: none;
-    }
-
-    .main-nav.overlay .menu-button {
-        border-color: transparent;
     }
 
     .nav-title {
@@ -1898,7 +1784,6 @@ body:not(.page-template) .post-title {
         height: 30vh;
     }
 
-    .tag-head.main-header,
     .author-head.main-header {
         height: 20vh;
     }
@@ -1942,6 +1827,27 @@ body:not(.page-template) .post-title {
 /* ==========================================================================
    14. Animations
    ========================================================================== */
+
+.icon-popout {
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+}
+
+.github-popout {
+    background: url('../imgs/github.png');
+}
+
+.rss-popout {
+    background: url('../imgs/tdd.png');
+}
+
+.icon-popout:hover {
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    border-radius: 50% !important;
+}
 
 
 /* ==========================================================================

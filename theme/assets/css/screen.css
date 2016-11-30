@@ -538,15 +538,6 @@ button {
             transition: transform 0.5s ease;
 }
 
-body.nav-opened .site-wrapper {
-    overflow-x: hidden;
-    -webkit-transform: translate3D(-240px, 0, 0);
-        -ms-transform: translate3D(-240px, 0, 0);
-            transform: translate3D(-240px, 0, 0);
-    -webkit-transition: -webkit-transform 0.3s ease;
-            transition: transform 0.3s ease;
-}
-
 
 /* ==========================================================================
    4. General - The main styles for the the theme
@@ -564,6 +555,7 @@ body.nav-opened .site-wrapper {
     overflow: hidden;
 }
 
+/* Navigation */
 .new-nav ul {
     list-style: none;
     padding-top: 2.5rem !important;
@@ -587,51 +579,6 @@ body.nav-opened .site-wrapper {
     box-shadow: 0px -1px 10px gainsboro;
 }
 
-/* Navigation */
-body.nav-opened .nav-cover {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 240px;
-    bottom: 0;
-    z-index: 200;
-}
-
-.nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 5;
-    width: 240px;
-    opacity: 0;
-    background: #111;
-    margin-bottom: 0;
-    text-align: left;
-    overflow-y: auto;
-    -webkit-transition: -webkit-transform 0.5s ease,
-                        opacity 0.3s ease 0.7s;
-            transition: transform 0.5s ease,
-                        opacity 0.3s ease 0.7s;
-}
-
-body.nav-closed .nav {
-    -webkit-transform: translate3D(97px, 0, 0);
-        -ms-transform: translate3D(97px, 0, 0);
-            transform: translate3D(97px, 0, 0);
-}
-
-body.nav-opened .nav {
-    opacity: 1;
-    -webkit-transition: -webkit-transform 0.3s ease,
-                        opacity 0s ease 0s;
-            transition: transform 0.3s ease,
-                        opacity 0s ease 0s;
-    -webkit-transform: translate3D(0, 0, 0);
-        -ms-transform: translate3D(0, 0, 0);
-            transform: translate3D(0, 0, 0);
-}
-
 /* Put a semi-opaque radial gradient behind the icon to make it more visible
    on photos which happen to have a light background. */
 .home-template .main-header:after {
@@ -651,20 +598,6 @@ body.nav-opened .nav {
 .no-cover.main-header:after,
 .paged .main-header:after {
     display: none
-}
-
-/* Special styles when overlaid on an image*/
-.main-nav.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 70px;
-    border: none;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);
-}
-.no-cover .main-nav.overlay {
-    background: none;
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
@@ -1065,30 +998,6 @@ body:not(.page-template) .post-title {
         max-height: 20vh;
         min-height: 160px;
         padding: 10% 0;
-    }
-
-    .main-nav.overlay a:hover {
-        color: #fff;
-        border-color: transparent;
-        background: transparent;
-    }
-
-    .no-cover .main-nav.overlay {
-        background: none;
-    }
-
-    .nav-title {
-        top: 25px;
-
-    }
-
-    .nav-close {
-        position: absolute;
-        top: 18px;
-    }
-
-    .nav ul {
-        padding: 60px 9% 5%;
     }
 
     .inner,

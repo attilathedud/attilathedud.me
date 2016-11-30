@@ -587,17 +587,6 @@ body.nav-opened .site-wrapper {
     box-shadow: 0px -1px 10px gainsboro;
 }
 
-.main-nav {
-    position: relative;
-    padding: 35px 40px;
-    margin: 0 0 30px 0;
-}
-
-.main-nav a {
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-}
-
 /* Navigation */
 body.nav-opened .nav-cover {
     position: fixed;
@@ -641,106 +630,6 @@ body.nav-opened .nav {
     -webkit-transform: translate3D(0, 0, 0);
         -ms-transform: translate3D(0, 0, 0);
             transform: translate3D(0, 0, 0);
-}
-
-.nav-title {
-    position: absolute;
-    top: 45px;
-    left: 30px;
-    font-size: 16px;
-    font-weight: 100;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.nav-close {
-    position: absolute;
-    top: 38px;
-    right: 25px;
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    font-size: 10px;
-}
-
-.nav-close:focus {
-    outline: 0;
-}
-
-.nav-close:before,
-.nav-close:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 20px;
-    height: 1px;
-    background: rgb(150,150,150);
-    top: 15px;
-    -webkit-transition: background 0.15s ease;
-            transition: background 0.15s ease;
-}
-
-.nav-close:before {
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-}
-
-.nav-close:after {
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-}
-
-.nav-close:hover:before,
-.nav-close:hover:after {
-    background: rgb(255,255,255);
-}
-
-.nav ul {
-    padding: 90px 9% 5%;
-    list-style: none;
-}
-
-.nav li:before {
-    display: block;
-    float: right;
-    padding-right: 4%;
-    padding-left: 5px;
-    text-align: right;
-    font-size: 1.2rem;
-    vertical-align: bottom;
-    color: #B8B8B8;
-}
-.nav li {
-    margin: 0;
-    text-align: center;
-}
-.nav li a {
-    text-decoration: none;
-    line-height: 1.4;
-    font-size: 1.4rem;
-    display: block;
-    padding: 0.6rem 4%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.nav .nav-current:before {
-    color: #fff;
-}
-
-.nav a:link,
-.nav a:visited {
-    color: #B8B8B8;
-}
-
-.nav li.nav-current a,
-.nav a:hover,
-.nav a:active,
-.nav a:focus {
-    color: #fff;
 }
 
 /* Put a semi-opaque radial gradient behind the icon to make it more visible
@@ -789,26 +678,12 @@ body.nav-opened .nav {
     color: #fff;
 }
 
-.page-description {
-    margin: 0;
-    font-size: 2rem;
-    line-height: 1.5em;
-    font-weight: 400;
-    font-family: "Merriweather", serif;
-    letter-spacing: 0.01rem;
-    color: rgba(255,255,255,0.8);
-}
-
 .no-cover.main-header {
     background: url( '../imgs/triangular.png' );
 }
 
 .no-cover .page-title {
     color: rgba(0,0,0,0.8);
-}
-
-.no-cover .page-description {
-    color: rgba(0,0,0,0.5);
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -849,14 +724,6 @@ body:not(.page-template) .post-title {
     color: #9EABB3;
 }
 
-.author-thumb {
-    width: 24px;
-    height: 24px;
-    float: left;
-    margin-right: 9px;
-    border-radius: 100%;
-}
-
 .post-meta a {
     color: #9EABB3;
     text-decoration: none;
@@ -866,54 +733,11 @@ body:not(.page-template) .post-title {
     text-decoration: underline;
 }
 
-.user-meta {
-    position: relative;
-    padding: 0.3rem 40px 0 100px;
-    min-height: 77px;
-}
-
 .post-date {
     display: inline-block;
     text-transform: uppercase;
     font-size: 1.3rem;
     white-space: nowrap;
-}
-
-.user-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.user-name {
-    display: block;
-    font-weight: 700;
-}
-
-.user-bio {
-    display: block;
-    max-width: 440px;
-    font-size: 1.4rem;
-    line-height: 1.5em;
-}
-
-.publish-meta {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 4.3rem 0 4rem 0;
-    text-align: right;
-}
-
-.publish-heading {
-    display: block;
-    font-weight: 700;
-}
-
-.publish-date {
-    display: block;
-    font-size: 1.4rem;
-    line-height: 1.5em;
 }
 
 .end-content-hr {
@@ -1003,17 +827,6 @@ body:not(.page-template) .post-title {
 
 .footnotes p a:last-child {
     text-decoration: none;
-}
-
-/* list of author links - location / url */
-.author-meta {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    font-size: 1.4rem;
-    line-height: 1;
-    font-style: italic;
-    color: #9EABB3;
 }
 
 /* ==========================================================================
@@ -1184,18 +997,9 @@ body:not(.page-template) .post-title {
         padding: 10% 0;
     }
 
-    .blog-logo img {
-        padding: 4px 0;
-    }
-
     .page-title {
         font-size: 4rem;
         letter-spacing: -1px;
-    }
-
-    .page-description {
-        font-size: 1.8rem;
-        line-height: 1.5em;
     }
 
     .post {
@@ -1239,58 +1043,6 @@ body:not(.page-template) .post-title {
     h6 {
         font-size: 1.8rem;
     }
-
-    .author-profile {
-        padding-bottom: 4rem;
-    }
-
-    .author-profile .author-bio {
-        font-size: 1.6rem;
-    }
-
-    .author-meta span {
-        display: block;
-        margin: 1.5rem 0;
-    }
-    .author-profile .author-meta span {
-        font-size: 1.6rem;
-    }
-
-    .post-head.main-header {
-        height:45vh;
-    }
-
-    .author-head.main-header {
-        height: 30vh;
-    }
-
-    .no-cover.post-head.main-header {
-        height: 55px;
-        padding: 0;
-    }
-
-    .no-cover.author-head.main-header {
-        padding: 0;
-    }
-
-    .read-next {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        margin-top: 4rem;
-    }
-
-    .read-next p {
-        display: none;
-    }
-
-    .read-next-story.no-cover + .read-next-story.no-cover {
-        border-top: rgba(0,0,100,0.06) 1px solid;
-        border-left: none;
-    }
-
 }
 
 
@@ -1314,21 +1066,6 @@ body:not(.page-template) .post-title {
         min-height: 160px;
         padding: 10% 0;
     }
-
-    .main-nav {
-        padding: 5px;
-        margin-bottom: 2rem;
-    }
-
-    .blog-logo {
-        padding: 5px;
-    }
-
-    .blog-logo img {
-        height: 30px;
-    }
-
-    
 
     .main-nav.overlay a:hover {
         color: #fff;
@@ -1401,10 +1138,6 @@ body:not(.page-template) .post-title {
         font-size: 0.85em;
     }
 
-    .page-description {
-        font-size: 1.6rem;
-    }
-
     h1, h2, h3,
     h4, h5, h6 {
         margin: 0 0 0.3em 0;
@@ -1458,16 +1191,6 @@ body:not(.page-template) .post-title {
         margin-top: 1rem;
     }
 
-    .author-meta li {
-        float: none;
-        margin: 0;
-        line-height: 1.75em;
-    }
-
-    .author-meta li:before {
-        display: none;
-    }
-
     .older-posts,
     .newer-posts {
         position: static;
@@ -1480,30 +1203,6 @@ body:not(.page-template) .post-title {
 
     .site-footer {
         margin-top: 3rem;
-    }
-
-    .author-profile {
-        padding-bottom: 2rem;
-    }
-
-    .post-head.main-header {
-        height: 30vh;
-    }
-
-    .author-head.main-header {
-        height: 20vh;
-    }
-
-    .author-profile .author-image {
-        margin-top: -70px;
-    }
-
-    .author-profile .author-meta span {
-        font-size: 1.4rem;
-    }
-
-    .paged .main-header .page-description {
-        display: none;
     }
 
 }

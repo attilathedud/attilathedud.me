@@ -24,6 +24,10 @@
         "minimal",
         "theme"
     ],
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.png",
+        "mobile": "assets/screenshot-mobile.png"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/attilathedud/attilathedud.me"

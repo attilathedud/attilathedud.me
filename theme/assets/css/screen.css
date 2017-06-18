@@ -149,10 +149,6 @@ body {
     text-rendering: geometricPrecision;
 }
 
-#disqus_thread {
-    margin: 10px;
-}
-
 ::-moz-selection {
     background: #D6EDFF;
 }

@@ -528,7 +528,8 @@ button {
     position: relative;
     z-index: 10;
     min-height: 100%;
-    background: #003333;
+    background: #333333;
+    background: url( '../imgs/background.png' );
     -webkit-transition: -webkit-transform 0.5s ease;
             transition: transform 0.5s ease;
 }
@@ -622,11 +623,16 @@ button {
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
-    width: 95%;
-    margin: 6rem auto;
-    padding-left: 2rem;
-    border-left: #EBF2F6 5px solid;
+    width: 90%;
+    margin: 4rem auto;
+    padding: 2rem;
+    border:#444444 1px solid;
+    background: #222222;
+    border-radius: 3px;
     word-wrap: break-word;
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
 }
 
 body:not(.post-template) .post-title,
@@ -716,8 +722,6 @@ body:not(.page-template) .post-title {
 .post-template .post,
 .page-template .post {
     margin-top: 0;
-    border-bottom: none;
-    padding-bottom: 0;
 }
 
 /* Kill that stylish little circle that was on the border, too */

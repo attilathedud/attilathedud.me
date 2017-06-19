@@ -948,11 +948,6 @@ body:not(.page-template) .post-title {
 
     .home-template .main-header:after { display: none; }
 
-    .paged .main-header {
-        min-height: 180px;
-        padding: 10% 0;
-    }
-
     .page-title {
         font-size: 4rem;
         letter-spacing: -1px;
@@ -1014,7 +1009,6 @@ body:not(.page-template) .post-title {
 
     .paged .main-header {
         max-height: 20vh;
-        min-height: 160px;
     }
 
     .inner,

@@ -36,7 +36,13 @@
 
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
+
+    <script type="text/javascript">
+        var max_pages = parseInt('{{pagination.pages}}');
+    </script>
+
     {{!-- The main JavaScript file for Casper --}}
+    <script type="text/javascript" src="{{asset "js/jquery-3.2.1.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
 

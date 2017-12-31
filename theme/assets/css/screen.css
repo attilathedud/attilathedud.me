@@ -679,11 +679,6 @@ body:not(.page-template) .post-title {
     white-space: nowrap;
 }
 
-.end-content-hr {
-    width: 95%;
-    margin: 6rem auto;
-}
-
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */

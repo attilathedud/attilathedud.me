@@ -5,12 +5,15 @@ $(function () {
 
     $window.scroll(function () {
         if ($window.scrollTop() + $window.height() == $(document).height()) {
-            $.get((url_blog + '/page/' + page), function (content) {
-                if (page <= max_pages) {
+            if (page <= max_pages) {
+                $('.loading').fadeIn();
+                
+                $.get((url_blog + '/page/' + page), function (content) {
                     $('.content').append($(content).find(".post"));
                     page = page + 1;
-                }
-            });
+                    $('.loading').fadeOut();
+                });
+            }
         }
     });
 

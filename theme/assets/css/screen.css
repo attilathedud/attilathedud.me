@@ -1,27 +1,8 @@
 /* ==========================================================================
-   Table of Contents
-   ========================================================================== */
-
-/*
-
-    0.  Normalize
-    1.  Icons
-    2.  General
-    3.  Utilities
-    4.  General
-    5.  Single Post
-    6.  Third Party Elements
-    7.  Pagination
-    8.  Footer
-    9.  Media Queries
-
-*/
-
-/* ==========================================================================
    0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
 
-html {
+   html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
@@ -580,6 +561,20 @@ button {
     text-align: center;
 }
 
+.loading-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    display: none;
+    background: url('../imgs/ajax-loader.gif');
+    margin-bottom: 10px;
+    width: 64px;
+    height: 64px;
+}
+
 /* Put a semi-opaque radial gradient behind the icon to make it more visible
    on photos which happen to have a light background. */
 .home-template .main-header:after {
@@ -762,115 +757,6 @@ body:not(.page-template) .post-title {
 }
 
 /* ==========================================================================
-   6. Third Party Elements - Embeds from other services
-   ========================================================================== */
-
-/* Github */
-.gist table {
-    margin: 0;
-    font-size: 1.4rem;
-    text-rendering: auto;
-}
-.gist td {
-    line-height: 1.4;
-}
-.gist .line-number {
-    min-width: 25px;
-}
-
-/* Pastebin */
-.content .embedPastebin {
-    margin-bottom: 1.75em;
-}
-
-
-/* ==========================================================================
-   7. Pagination - Tools to let you flick between pages
-   ========================================================================== */
-
-/* The main wrapper for our pagination links */
-.pagination {
-    position: relative;
-    width: 95%;
-    margin: 4rem auto;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.3rem;
-    color: #9EABB3;
-    text-align: center;
-}
-
-.pagination a {
-    color: #9EABB3;
-    transition: all 0.2s ease;
-}
-
-/* Push the previous/next links out to the left/right */
-.older-posts,
-.newer-posts {
-    position: absolute;
-    display: inline-block;
-    padding: 0 15px;
-    border: #bfc8cd 1px solid;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: border 0.3s ease;
-}
-
-.older-posts {
-    right: 0;
-}
-
-.page-number {
-    display: inline-block;
-    padding: 2px 0;
-    min-width: 100px;
-}
-
-.newer-posts {
-    left: 0;
-}
-
-.older-posts:hover,
-.newer-posts:hover {
-    color: #889093;
-    border-color: #98a0a4;
-}
-
-.extra-pagination {
-    display: none;
-    border-bottom: #EBF2F6 1px solid;
-}
-.extra-pagination:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #E7EEF2 1px solid;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #FFF;
-    border-radius: 100%;
-    box-shadow: #FFF 0 0 0 5px;
-}
-.extra-pagination .pagination {
-    width: auto;
-}
-
-/* On page2+ make all the headers smaller */
-.paged .main-header {
-    max-height: 30vh;
-}
-
-/* On page2+ show extra pagination controls at the top of post list */
-.paged .extra-pagination {
-    display: block;
-}
-
-
-
-/* ==========================================================================
    8. Footer - The bottom of every page
    ========================================================================== */
 
@@ -1006,8 +892,7 @@ body:not(.page-template) .post-title {
         max-height: 20vh;
     }
 
-    .inner,
-    .pagination {
+    .inner {
         width: auto;
     }
 

@@ -1,0 +1,26 @@
+@import 'colors';
+
+.site-footer {
+    position: relative;
+    padding: 1rem 15px;
+    font-size: 1rem;
+    line-height: 1.75em;
+    color: $footer-text-color;
+
+    a {
+        color: $footer-text-color;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            border-bottom: $footer-text-color 1px solid;
+        }
+    }
+}
+
+.copyright {
+    display: block;
+    width: 45%;
+    margin: auto;
+    text-align: center;
+}

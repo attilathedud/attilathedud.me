@@ -1,0 +1,41 @@
+@import 'colors';
+
+.clearfix {
+    zoom: 1;
+
+    &:before {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+.hidden {
+    text-indent: -9999px;
+    visibility: hidden;
+    display: none;
+}
+
+.inner {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.vertical {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.site-wrapper {
+    position: relative;
+    z-index: 10;
+    min-height: 100%;
+    background: $site-background-color;
+    background: url( '../imgs/background.png' );
+}

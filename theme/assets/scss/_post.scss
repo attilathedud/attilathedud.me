@@ -1,0 +1,67 @@
+.post-template, .page-template {
+    .post-header {
+        margin-bottom: 3.4rem;
+    }
+    
+    .post-title {
+        margin-bottom: 0;
+    }
+
+    .post-meta {
+        margin: 0;
+    }
+
+    .post-date {
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+
+    .content {
+        overflow: hidden;
+    }
+
+    .post {
+        margin-top: 0;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    img {
+        display: block;
+        max-width: 126%;
+        height: auto;
+        padding: 0.6em 0;
+        /* Centers an image by (1) pushing its left edge to the
+           center of its container and (2) shifting the entire image
+           in the opposite direction by half its own width.
+           Works for images that are larger than their containers. */
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%); /* for Safari and iOS */
+        -ms-transform: translateX(-50%); /* for IE9 */
+        transform: translateX(-50%);
+    }
+
+}
+
+.footnotes {
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.6em;
+
+    li {
+        margin: 0.6rem 0;
+    }
+
+    p {
+        margin: 0;
+
+        a:last-child {
+            text-decoration: none;
+        }
+
+    }
+}

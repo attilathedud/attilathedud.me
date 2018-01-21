@@ -1,0 +1,127 @@
+@media only screen and (max-width: 500px) {
+    .main-header {
+        margin-bottom: 15px;
+    }
+
+    .paged .main-header {
+        max-height: 20vh;
+    }
+
+    .inner {
+        width: auto;
+    }
+
+    .icon-popout {
+        margin-top: 1rem;
+    }
+
+    .post {
+        width: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-bottom: 2rem;
+        line-height: 1.65em;
+    }
+
+    .post-date {
+        display: none;
+    }
+
+    .post-template .post-header,
+    .page-template .post-header {
+        margin-bottom: 2rem;
+    }
+
+    .post-template .post-date,
+    .page-template .post-date {
+        display: inline-block;
+    }
+
+    hr {
+        margin: 1.75em 0;
+    }
+
+    p, ul, ol, dl {
+        font-size: 0.95em;
+        margin: 0 0 2.5rem 0;
+    }
+
+    .page-title {
+        font-size: 3rem;
+        margin-left: 10px;
+    }
+
+    .post-excerpt p {
+        font-size: 0.85em;
+    }
+
+    h1, h2, h3,
+    h4, h5, h6 {
+        margin: 0 0 0.3em 0;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        letter-spacing: 0;
+    }
+
+    h3 {
+        font-size: 2.1rem;
+    }
+
+    h4 {
+        font-size: 1.9rem;
+    }
+
+    h5 {
+        font-size: 1.8rem;
+    }
+
+    h6 {
+        font-size: 1.8rem;
+    }
+
+    body:not(.post-template) .post-title,
+    body:not(.page-template) .post-title {
+        font-size: 2.5rem;
+    }
+
+    .post-template .site-footer,
+    .page-template .site-footer {
+        margin-top: 0;
+    }
+
+    .post-content img {
+        padding: 0;
+        width: calc(100% + 32px); /* expand with to image + margins */
+        min-width: 0;
+        max-width: 112%; /* fallback when calc doesn't work */
+    }
+
+    .post-meta {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+
+    .older-posts,
+    .newer-posts {
+        position: static;
+        margin: 10px 0;
+    }
+
+    .page-number {
+        display: block;
+    }
+
+    .site-footer {
+        margin-top: 3rem;
+    }
+
+}

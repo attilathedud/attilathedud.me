@@ -23,4 +23,19 @@ $(function () {
     $('.nav-bar a').each(function () {
         $(this).css('border-bottom', '5px solid rgba(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',.8)');
     });
+
+    if($('article').length > 1) {
+        $(document).on('click', 'article', function() {
+            window.location = $(this).find('h2').find('a').attr('href');
+        });
+
+        $(document).on('mouseenter', 'article', function() {
+            $(this).addClass('post-scaled');
+        });
+
+        $(document).on('mouseleave', 'article', function() {
+            $(this).removeClass('post-scaled');
+        });
+
+    }
 });

@@ -53,6 +53,16 @@
     -webkit-box-shadow: 10px 10px 20px 0px $post-boxshadow-color;
     -moz-box-shadow: 10px 10px 20px 0px $post-boxshadow-color;
     box-shadow: 10px 10px 20px 0px $post-boxshadow-color;
+    transform: scale(1);
+}
+
+.post-scaled {
+    transform: scale(1.04);
+
+    &:hover {
+        cursor: pointer;
+        user-select: none;
+    }
 }
 
 body:not(.post-template) .post-title,

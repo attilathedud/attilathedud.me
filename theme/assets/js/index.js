@@ -20,8 +20,12 @@ $(function () {
         }
     });
 
-    $('.nav-bar a').each(function () {
+    $('.nav-bar a, .nav-bar-mobile a').each(function () {
         $(this).css('border-bottom', '5px solid rgba(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',.8)');
+    });
+
+    $('.nav-bar-mobile .icon').on('click', function() {
+        $('.nav-bar-mobile ul').toggle();
     });
 
     if($('article').length > 1) {

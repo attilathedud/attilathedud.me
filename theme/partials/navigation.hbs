@@ -7,3 +7,15 @@
         {{/foreach}}
     </ul>
 </div>
+
+<div class="nav-bar-mobile">
+    <div class="icon">☰</div>
+    <div class="clearfix"></div>
+    <ul>
+        {{#foreach navigation}}
+            <li class="nav-bar-mobile{{#if current}} nav-current{{/if}}">
+                <a href="{{url absolute="true"}}">{{label}}</a>
+            </li>
+        {{/foreach}}
+    </ul>
+</div>

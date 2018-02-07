@@ -54,10 +54,12 @@
     -moz-box-shadow: 10px 10px 20px 0px $post-boxshadow-color;
     box-shadow: 10px 10px 20px 0px $post-boxshadow-color;
     transform: scale(1);
+    transition: 0.2s;
 }
 
 .post-scaled {
     transform: scale(1.04);
+    transition: 0.1s;
 
     &:hover {
         cursor: pointer;

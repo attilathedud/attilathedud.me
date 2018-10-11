@@ -1,5 +1,5 @@
 $(function () {
-    var blog_url = window.location;
+    var blog_url = window.location.href;
     var is_loading = false;
 
     //taken from https://stackoverflow.com/questions/19491336/get-url-parameter-jquery-or-how-to-get-query-string-values-in-js/21903119#21903119
@@ -40,7 +40,7 @@ $(function () {
             $('.loading').fadeIn();
 
             for( var i = 2; i <= page; i++ ) {
-                $.get((blog_url.origin + '/page/' + i), function (content) {
+                $.get((blog_url + 'page/' + i), function (content) {
                     var page_title = $(content).filter('title').text();
                     page_title = page_title.substring(page_title.indexOf("Page") + 4, page_title.length - 1);
                     
@@ -71,11 +71,11 @@ $(function () {
                     is_loading = true;
                     $('.loading').fadeIn();
                     
-                    $.get((blog_url.origin + '/page/' + page), function (content) {
+                    $.get((blog_url + 'page/' + page), function (content) {
                         $('.content').append($(content).find(".post"));
     
                         if( history.pushState ) {
-                            var url = blog_url.origin;
+                            var url = blog_url;
                             url += "?page=" + page;
                             history.replaceState({path:url}, '', url);
                         }

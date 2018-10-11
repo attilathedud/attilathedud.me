@@ -70,7 +70,6 @@ p, ul, ol, dl {
     -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-    margin: 0 0 1.75em 0;
     text-rendering: geometricPrecision;
 }
 
@@ -185,4 +184,69 @@ pre {
         border: none;
         padding: 0;
     }
+}
+
+/* 7.6. Koenig Styles
+/* ---------------------------------------------------------- */
+.kg-width-wide, .kg-width-full {
+	width: 100%;
+}
+
+.kg-image-card,
+.kg-gallery-card {
+    margin: 0 0 1.5em;
+}
+
+.kg-image-card figcaption,
+.kg-gallery-card figcaption {
+    margin: -1.0em 0 1.5em;
+}
+
+.kg-embed-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5em 0 3em;
+    min-width: 100%;
+}
+
+.kg-embed-card figcaption {
+    margin: 0.5em 0 0;
+}
+
+.kg-embed-card .fluid-width-video-wrapper {
+    margin: 0;
+}
+
+.kg-image-full + figcaption {
+    padding: 0 1.5em;
+}
+
+.kg-gallery-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em auto;
+    max-width: 1040px;
+    width: 100vw;
+}
+
+.kg-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kg-gallery-image img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+    margin: 0.75em 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+    margin: 0 0 0 0.75em;
 }

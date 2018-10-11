@@ -2,9 +2,9 @@
     "name": "dark-minimal",
     "description": "Minimal dark theme for Ghost.",
     "demo": "attilathedud.me",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "engines": {
-        "ghost": ">=0.9.0 <1.0.0"
+        "ghost": ">=0.9.0 <=2.3.0"
     },
     "license": "MIT",
     "author": {
@@ -22,7 +22,8 @@
     "keywords": [
         "dark",
         "minimal",
-        "theme"
+        "theme",
+	"ghost-theme"
     ],
     "screenshots": {
         "desktop": "assets/screenshot-desktop.png",
@@ -31,5 +32,8 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/attilathedud/attilathedud.me"
+    },
+    "config": {
+	"posts_per_page": 5
     }
 }

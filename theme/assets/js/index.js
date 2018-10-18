@@ -39,8 +39,14 @@ $(function () {
             is_loading = true;
             $('.loading').fadeIn();
 
+            var blog_url_without_param = blog_url;
+
+            if( blog_url.indexOf("/?") != -1 ) {
+                blog_url_without_param = blog_url.substring(0, blog_url.indexOf("/?") + 1);
+            }
+            
             for( var i = 2; i <= page; i++ ) {
-                $.get((blog_url + 'page/' + i), function (content) {
+                $.get((blog_url_without_param + 'page/' + i), function (content) {
                     var page_title = $(content).filter('title').text();
                     page_title = page_title.substring(page_title.indexOf("Page") + 4, page_title.length - 1);
                     
@@ -70,12 +76,18 @@ $(function () {
                     page = page + 1;
                     is_loading = true;
                     $('.loading').fadeIn();
-                    
-                    $.get((blog_url + 'page/' + page), function (content) {
+             
+                    var blog_url_without_param = blog_url;
+
+                    if( blog_url.indexOf("/?") != -1 ) {
+                        blog_url_without_param = blog_url.substring(0, blog_url.indexOf("/?") + 1);
+                    }
+
+                    $.get((blog_url_without_param + 'page/' + page), function (content) {
                         $('.content').append($(content).find(".post"));
     
                         if( history.pushState ) {
-                            var url = blog_url;
+                            var url = blog_url_without_param;
                             url += "?page=" + page;
                             history.replaceState({path:url}, '', url);
                         }

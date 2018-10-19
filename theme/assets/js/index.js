@@ -18,6 +18,15 @@ $(function () {
         }
     };
 
+    var getStrippedUrl = function getStrippedUrl(url) {
+        if( url.indexOf("/?") != -1 ) {
+            return url.substring(0, url.indexOf("/?") + 1);
+        }
+        else {
+            return url;
+        }
+    };
+
     $('.nav-bar a, .nav-bar-mobile a').each(function () {
         $(this).css('border-bottom', '5px solid rgba(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',.8)');
     });
@@ -39,12 +48,8 @@ $(function () {
             is_loading = true;
             $('.loading').fadeIn();
 
-            var blog_url_without_param = blog_url;
-
-            if( blog_url.indexOf("/?") != -1 ) {
-                blog_url_without_param = blog_url.substring(0, blog_url.indexOf("/?") + 1);
-            }
-            
+            var blog_url_without_param = getStrippedUrl(blog_url);
+           
             for( var i = 2; i <= page; i++ ) {
                 $.get((blog_url_without_param + 'page/' + i), function (content) {
                     var page_title = $(content).filter('title').text();
@@ -77,11 +82,7 @@ $(function () {
                     is_loading = true;
                     $('.loading').fadeIn();
              
-                    var blog_url_without_param = blog_url;
-
-                    if( blog_url.indexOf("/?") != -1 ) {
-                        blog_url_without_param = blog_url.substring(0, blog_url.indexOf("/?") + 1);
-                    }
+                    var blog_url_without_param = getStrippedUrl(blog_url);
 
                     $.get((blog_url_without_param + 'page/' + page), function (content) {
                         $('.content').append($(content).find(".post"));

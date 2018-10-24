@@ -2,7 +2,7 @@
     "name": "dark-minimal",
     "description": "Minimal dark theme for Ghost.",
     "demo": "attilathedud.me",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "engines": {
         "ghost": ">=0.9.0 <=2.3.0"
     },
